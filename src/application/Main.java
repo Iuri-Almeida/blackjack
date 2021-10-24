@@ -87,6 +87,13 @@ public class Main {
 		System.out.print("Vc está com " + player.getPoints() + " ponto(s). Deseja continuar? (s/n) ");
 		char answer = sc.next().trim().toLowerCase().charAt(0);
 		
+		while (answer != 's' && answer != 'n') {
+			
+			System.out.print("Tente de novo. Deseja continuar? (s/n) ");
+			answer = sc.next().trim().toLowerCase().charAt(0);
+			
+		}
+		
 		if (answer == 's') {
 			
 			String[] cardValues = getCardValues(deck);
